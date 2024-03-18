@@ -17,6 +17,8 @@ cd hdf5-cpp
 apptainer build hdf5-cpp.sif hdf5-cpp.def
 ```
 
+> Note: you will be presented with the Copyright Notice and License Terms for HDF5 (Hierarchical Data Format 5) Software Library and Utilities. To continue, press `Q`.
+
 ### Viewing help
 
 ```
