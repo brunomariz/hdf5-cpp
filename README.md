@@ -53,3 +53,7 @@ apptainer exec ../../hdf5-cpp.sif cmake
 apptainer exec ../../hdf5-cpp.sif make
 apptainer exec ../../hdf5-cpp.sif ./create.x
 ```
+
+## Examples
+
+More examples can be found in the `/hdf5/CMake-hdf5-1.14.3/hdf5-1.14.3/c++/examples/` folder.
