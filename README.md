@@ -6,17 +6,23 @@ This repo contains the definition file along with other necessary files for crea
 
 ### Building container
 
-    apptainer build hdf5-cpp.sif hdf5-cpp.def
+```
+apptainer build hdf5-cpp.sif hdf5-cpp.def
+```
 
 ### Viewing help
 
-    apptainer run-help hdf5-cpp.sif
+```
+apptainer run-help hdf5-cpp.sif
+```
 
 ### Running container
 
 - Run container interactively:
 
-  apptainer shell hdf5-cpp.sif
+```
+apptainer shell hdf5-cpp.sif
+```
 
 - Running example interactively:
 
