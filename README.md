@@ -4,6 +4,13 @@ This repo contains the definition file along with other necessary files for crea
 
 ## Usage
 
+Clone this repo
+
+```
+git clone https://github.com/brunomariz/hdf5-cpp.git
+cd hdf5-cpp
+```
+
 ### Building container
 
 ```
