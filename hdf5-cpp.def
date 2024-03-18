@@ -1,0 +1,60 @@
+Bootstrap: docker
+From: ubuntu:latest
+
+%environment
+
+%post 
+    mkdir /hdf5
+    cd /hdf5
+
+    # Install dependencies
+    apt-get update
+    apt-get install -y python3-pip build-essential cmake
+    pip install gdown
+
+    # Download website: https://www.hdfgroup.org/downloads/hdf5/source-code/# 
+    YELLOW='\033[1;33m'
+    NC='\033[0m' 
+    echo -e "${YELLOW} WARNING: download link may be deprecated. See  https://www.hdfgroup.org/downloads/hdf5/source-code/# for source download link. Alternatively, download from ${NC}"
+    gdown https://drive.google.com/uc?id=1AjD-3GX4wfjhgJ85uHZmKdDKLGY-AYbl
+    tar xf CMake-hdf5-1.14.3.tar.gz
+    # Install
+    cd CMake-hdf5-1.14.3
+    ./build-unix.sh
+    yes | ./HDF5-1.14.3-Linux.sh
+    cp -r HDF5-1.14.3-Linux/HDF_Group/HDF5/1.14.3/ ../build
+
+%test
+    gcc --version
+    if [ $? -eq 0 ]; then
+        echo "gcc installed"
+    else
+        echo "gcc installation error"
+        exit 1
+    fi
+    
+    g++ --version
+    if [ $? -eq 0 ]; then
+        echo "g++ installed"
+    else
+        echo "g++ installation error"
+        exit 1
+    fi
+
+%labels
+    Author "Bruno Mariz"
+
+
+%help
+    Builds HDF5 at /hdf5build/build
+
+    Project structure example can be seen in `example` folder (see example/README.md).
+
+
+    Usage: 
+        apptainer exec container.sif command
+        Examples:
+            apptainer exec container.sif make
+     
+    Building the image from definition file:
+        apptainer build container.sif container.def
