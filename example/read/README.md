@@ -97,7 +97,7 @@ This shows that dataset `b` has shape (10, 10), (with the same value for max_sha
 float dset_data[10][10];
 ```
 
-It is also important to note that, since our dataset values are of type H5T\*IEEE_F64LE (Float 64, little-endian), we should set the mem_type_id (i.e., the variable type in memory after having been read by the API function) to float aswell, with the value H5T_NATIVE_FLOAT:
+It is also important to note that, since our dataset values are of type H5TIEEE_F64LE (Float 64, little-endian), we should set the mem_type_id (i.e., the variable type in memory after having been read by the API function) to float aswell, with the value H5T_NATIVE_FLOAT:
 
 ```c
 status = H5Dread(dataset_id, H5T_NATIVE_FLOAT, H5S_ALL, H5S_ALL,
