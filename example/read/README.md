@@ -115,7 +115,7 @@ mkdir build
 Build and run example
 
 ````
-cmake -S . -B build/```
+cmake -S . -B build/
 cmake --build build/ && ./build/read ^C
 ````
 
