@@ -116,7 +116,7 @@ Build and run example
 
 ````
 cmake -S . -B build/
-cmake --build build/ && ./build/read ^C
+cmake --build build/ && ./build/read
 ````
 
 This execution should output the contents of the `b` dataset in the `data/python_data.h5` file:
