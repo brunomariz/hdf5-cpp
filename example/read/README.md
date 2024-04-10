@@ -1,6 +1,6 @@
 # HDF5 Read example
 
-Example HDF5 project. This code reads a matrix from an HDF5 file created in python () and outputs to stdout.
+Example HDF5 project. This code reads a matrix from an HDF5 file [created in python](https://github.com/brunomariz/h5py-tutorial) and outputs to stdout.
 
 ## Sources:
 
@@ -8,8 +8,6 @@ Example HDF5 project. This code reads a matrix from an HDF5 file created in pyth
 - https://docs.hdfgroup.org/hdf5/v1_14/_l_b_examples.html
 - https://docs.hdfgroup.org/hdf5/v1_14/_l_b_dset_r_w.html
 - https://docs.hdfgroup.org/hdf5/v1_14/_learn_basics.html
-
-- https://github.com/brunomariz/h5py-tutorial
 
 ## Running example interactively:
 
