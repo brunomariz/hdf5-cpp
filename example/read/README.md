@@ -1,3 +1,5 @@
+# HDF5 Read example
+
 Example HDF5 project. This code reads a matrix from an HDF5 file created in python () and outputs to stdout.
 
 ## Sources:
@@ -120,3 +122,10 @@ cmake --build build/ && ./build/read ^C
 ````
 
 This execution should output the contents of the `b` dataset in the `data/python_data.h5` file:
+
+![image](https://github.com/brunomariz/hdf5-cpp/assets/48870924/5e005397-907f-4cf3-b164-ec5a29d43efd)
+
+HDF5 view screen for comparison:
+
+![Untitled](https://github.com/brunomariz/hdf5-cpp/assets/48870924/a0ada5c0-c2e0-4b4c-932b-706bcd9618b0)
+
